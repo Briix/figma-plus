@@ -94,7 +94,7 @@ export default {
       loadPlugins(masterListJSON);
     } else {
       const masterListUrl =
-        "https://jachui.github.io/figma-plugin-manager/masterList.json";
+        "https://figma-plus.github.io/plugin-directory/plugins.json";
       const masterListRequest = new XMLHttpRequest();
       masterListRequest.open(
         "GET",

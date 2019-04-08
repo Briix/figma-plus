@@ -11,7 +11,7 @@
 			.section
 				h2 Port
 				.description Set up a local http server at where your plugin files are located, then enter the port number of your server below.
-				input.port(type='text' v-model='port' @change='if (this.connected) showToast("Server settings updated.")')
+				input.port(type='text' v-model='port' @change='isConnected()')
 			.section
 				h2 Javascript files
 				a
@@ -114,6 +114,9 @@ export default {
         },
         600
       );
+    },
+    isConnected() {
+      if (this.connected) showToast("Server settings updated.")
     },
     updateLocalStorage() {
       const localServer = {};
